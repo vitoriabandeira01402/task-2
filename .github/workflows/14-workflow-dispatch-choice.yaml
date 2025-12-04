@@ -17,4 +17,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Mostrar ambiente selecionado
-        run: echo "Ambiente selecionado: ${{ github.event.inputs.ambiente }}"
+        run: echo Ambiente selecionado
