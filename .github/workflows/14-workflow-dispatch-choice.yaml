@@ -1,0 +1,20 @@
+name: workflow-dispatch-choice-input
+
+on:
+  workflow_dispatch:
+    inputs:
+      ambiente:
+        description: "Escolha o ambiente"
+        required: true
+        type: choice
+        options:
+          - dev
+          - hml
+          - prod
+
+jobs:
+  exemplo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Mostrar ambiente selecionado
+        run: echo "Ambiente selecionado: ${{ github.event.inputs.ambiente }}"
