@@ -1,0 +1,17 @@
+name: workflow-dispatch-boolean-input
+
+on:
+  workflow_dispatch:
+    inputs:
+      habilitar:
+        description: "Habilitar recurso?"
+        type: boolean
+        required: false
+        default: false
+
+jobs:
+  print-boolean:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verificar booleano
+        run: echo Valor do booleano habilitar
